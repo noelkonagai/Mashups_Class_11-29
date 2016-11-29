@@ -6,6 +6,8 @@
 //   .done(function(vis, layers) {
 //   });
 
+//
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
         //Navigation
