@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Easy example | CartoDB.js</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script>
+      function main() {
+        cartodb.createVis('map', 'https://noelkonagai.carto.com/api/v2/viz/e88c65ea-9f4e-11e6-bb68-0ef24382571b/viz.json', {
+            shareable: true,
+            title: true,
+            description: true,
+            search: false,
+            tiles_loader: true,
+            center_lat: 60,
+            center_lon: 85,
+            zoom: 3
+        })
+        .done(function(vis, layers) {
+          var slider = vis.timeSlider;
+          slider.formatter(function(d) {
+            return "Year:" + d.getFullYear();
+          })
+        })
+        .error(function(err) {
+          console.log(err);
+        });
+      }
+
+      window.onload = main;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+html, body, #map {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#map {
+	z-index: 1000;
+	width: 100%;
+}
+
+h1, h2 {
+	font-family: 'Oxygen', sans-serif;;
+	-webkit-font-smoothing: antialiased;
+}
+
+h3, h4, h5, h6, p {
+	font-family: 'Oxygen', sans-serif;;
+	-webkit-font-smoothing: antialiased;
+}
+
+#section0{
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-position: relative;
+	padding: 0 0 0 0;
+}
+
+img {
+	position: relative;
+	height: auto;
+	width: 100%;
+	z-index: 100;
+}
+
+h1 {
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	width: 100%;
+	z-index: 200;
+	font-size: 5.5em;
+	overflow: auto;
+}
+
+h2 {
+	position: absolute;
+	top: 40%;
+	left: 15%;
+	width: 100%;
+	z-index: 200;
+	font-size: 4.2em;
+	overflow: auto;
+}
+
+h3 {
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	width: 100%;
+	z-index: 200;
+	font-size: 5.5em;
+	overflow: auto;
+}
+
+p {
+	position: absolute;
+	text-align: justify;
+	overflow-wrap: auto;
+	top: 40%;
+	left: 15%;
+	right: 15%;
+	width: 600px;
+	z-index: 200;
+	font-size: 14pt;
+	overflow: auto;
+}
+
+a {
+	color: inherit;
+}
+
+div.cartodb-timeslider p {
+	position: inherit;
+}
+
+
